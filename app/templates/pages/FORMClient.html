@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client Form</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/CSSClient.css' %}">
+    <link rel="icon" type="image/jpg" href="{% static '/images/imghome/icon.jpg' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="form-wrapper">
+        <form action="{% url 'clientPage' %}" method="POST" id="clientForm">
+            {% csrf_token %}
+            <h2>Client Information</h2>
+            <a href="#" class="close-button"><i class="fas fa-times"></i></a> <!-- Updated X button -->
+            <p class="description">Please fill out the form below to register as a client.</p>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="id_name">Name</label>
+                    {{ form.name }}
+                </div>
+                <div class="form-group">
+                    <label for="id_email">Age</label>
+                    {{ form.age }}
+                </div>
+                <div class="form-group">
+                    <label for="id_phone">Gender</label>
+                    {{ form.gender }}
+                </div>
+                <div class="form-group">
+                    <label for="id_address">Email</label>
+                    {{ form.email }}
+                </div>
+                <div class="form-group">
+                    <label for="id_city">Contact</label>
+                    {{ form.contact }}
+                </div>
+            </div>
+            <input type="submit" name="Submit" value="Submit">
+        </form>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('clientForm');
+            const closeButton = form.querySelector('.close-button');
+
+            closeButton.addEventListener('click', function(event) {
+                event.preventDefault();
+                if (confirm('Are you sure you want to close the form? Any unsaved changes will be lost.')) {
+                    window.location.href = '/'; // Redirect or close action
+                }
+            });
+        });
+    </script>
+</body>
+</html>

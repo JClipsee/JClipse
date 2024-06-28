@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!---------- Style CSS ---------->
+	<link rel="stylesheet" type="text/css" href="{% static '/css/CSSHome.css' %}">
+<!-- ---------------------------->
+<!---------- ICONS ---------->
+	<link rel="icon" type="image/jpg" href="{% static '/images/imghome/icon.jpg' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!---------- Font ---------->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+	<title>JClipse</title>
+</head>
+<body>
+		{% include 'pages/navbar.html' %}
+		<section>
+		<div class="content">
+			<div class="textBox">
+				<h2><span>JClipse</span> Photography</h2>
+				<p>Book your Appointment Here!</p>
+				<a href="client/">Book Appointment</a>
+			</div>
+			<div class="imgBox">
+				<img src="{% static '/images/imghome/cam1.png' %}" class="camera">
+			</div>
+		</div>
+		<ul class="thumb">
+			<li><img src="{% static '/images/imghome/thumb1.png' %}" onclick="imgSlider('{% static '/images/imghome/cam1.png' %}')"></li>
+			<li><img src="{% static '/images/imghome/thumb2.png' %}" onclick="imgSlider('{% static '/images/imghome/cam2.png' %}')"></li>
+			<li><img src="{% static '/images/imghome/thumb3.png' %}" onclick="imgSlider('{% static '/images/imghome/cam3.png' %}')"></li>
+		</ul>
+	</section>
+
+
+<!-- JavaScript Section -->
+	<script src="{% static '/js/JSNavbar.js' %}"></script>
+	<script type="text/javascript">
+	 function imgSlider(anything){
+    	document.querySelector('.camera').src = anything;
+	}
+ </script>
+
+</body>
+</html>

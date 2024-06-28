@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Services</title>
+	<!----- ICON ----->
+    <link rel="icon" type="image/jpg" href="{% static '/images/imghome/icon.jpg' %}">
+	<!----- CSS Style ----->
+	<link rel="stylesheet" type="text/css" href="{% static '/css/CSSServices.css' %}">
+		<!----- FONTS / Fontawesome CDN ----->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<div id="services-section">
+					{% include 'pages/navbar.html' %}
+			<h2>Services</h2>
+			<p id="paragraph">Welcome to <span>JClipse</span>, where we transform your moments into timeless masterpieces! We specialize in a range of services designed to enhance, elevate, and immortalize your visual content. Whether you're a professional photographer, a filmmaker, or someone simply looking to add that extra sparkle to your memories, we've got you covered.</p>
+			<div class="cards">
+				<div class="card">
+					<i class="fa fa-camera"></i>
+					<div class="content">
+						<h3>Photo Editing</h3>
+						<p>Our team of skilled editors meticulously refine each image to perfection, ensuring every detail is accentuated and every flaw is seamlessly corrected. From color correction to advanced retouching, we breathe new life into your photographs, making them stand out with unparalleled clarity and vibrancy.</p>
+					</div>
+				</div>
+				<div class="card">
+					<i class="fa fa-video-camera"></i>
+					<div class="content">
+						<h3>Video Editing</h3>
+						<p>Let us turn your raw footage into captivating narratives. Our video editing experts employ cutting-edge techniques to craft seamless transitions, add captivating effects, and evoke emotion in every frame. Whether it's a promotional video, a wedding highlight reel, or a cinematic masterpiece, we bring your vision to life with finesse and flair.</p>
+					</div>
+				</div>
+				<div class="card">
+					<i class="fa fa-camera-retro"></i>
+					<div class="content">
+						<h3>Photo Booth</h3>
+						<p>Add an extra element of fun and excitement to your events with our photo booth services. Whether it's a corporate gathering, a wedding reception, or a birthday bash, our state-of-the-art booths capture candid moments and spontaneous smiles, creating lasting memories for you and your guests to cherish.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container1">
+		<div class="service_wrapper">
+			<div class="content">
+				<p class="title">Packages</p>
+				<p class="pack">We know every project is different.
+					That's why we have flexible packages to fit your needs and budget.
+					Whether you need a one-time service or ongoing help, we promise great results.
+					At <span>JCLipse</span>, we're all about creativity and quality. Let us turn your ideas into something amazing.
+					Get in touch to find out more!</p>
+				<div class="button">
+					<button>My Work</button>
+					<button>Contact Me</button>
+				</div>
+			</div>
+			<div class="Packages">
+				<ul class="accordion">
+		<li>
+			<input type="radio" name="accordion" id="first">
+			<label for="first">Package 1: Family Pictures</label>
+			<div class="content">
+				<h2>Inclusions: </h2>
+				<p>- 1pc. 8R Print </p>
+				<p>- 2pc. 3R Print </p>
+				<p>- 6pc. 2R Print </p>
+				<h4>Get Free: </h4>
+				<p>- 3pcs. Edited Soft Copy</p>
+				<h4>Price: ₱2,950.00</h4>
+				<a href="/client" class="action_btn">Book Appointment</a>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="accordion" id="second">
+			<label for="second">Package 2: Wedding</label>
+			<div class="content">
+				<h2>Inclusions: </h2>
+				<p>- 1pc. 8R Print</p>
+				<p>- 1pc. 8R Frame</p>
+				<p>- 2pc. 5R Print</p>
+				<p>- 15pcs. Memory File</p>
+				<p>(15) Best Shots</p>
+				<h4>Price: ₱7,000.00</h4>
+				<a href="/client" class="action_btn">Book Appointment</a>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="accordion" id="third">
+			<label for="third">Package 3: Graduation</label>
+			<div class="content">
+				<h2>Inclusions: </h2>
+				<p>- 1pc. 8R Print </p>
+				<p>- 1pc. 5R Print </p>
+				<p>- 2pc. 3R Print </p>
+				<p>- 4pc. 2R Print </p>
+				<h4>Get Free: </h4>
+				<p>- 3pcs. Edited Soft Copy</p>
+				<h4>Price: ₱3,140.00</h4>
+				<a href="/client" class="action_btn">Book Appointment</a>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="accordion" id="fourth">
+			<label for="fourth">Package 4: Product Promotion</label>
+			<div class="content">
+				<h2>Inclusions: </h2>
+				<p>- 1min Promotion Video </p>
+				<p>- 1pc. Promotion Image </p>
+				<h4>Get Free: </h4>
+				<p>- 3pcs. Edited Soft Copy</p>
+				<h4>Price: ₱5,999.00</h4>
+				<a href="/client" class="action_btn">Book Appointment</a>
+			</div>
+		</li>
+	</ul>
+			</div>
+		</div>
+	</div>
+
+<!-- JavaScript Section -->
+	<script src="{% static '/js/JSNavbar.js' %}"></script>
+
+	<!-- Footer Section -->
+{% include 'pages/footer.html' %}
+
+</body>
+</html>

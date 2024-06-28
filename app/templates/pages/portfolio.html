@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Portfolio</title>
+	<!-- CSS Section-->
+	<link rel="stylesheet" type="text/css" href="{% static '/css/CSSPortfolio.css' %}">
+	<!-- ICON -->
+	<link rel="icon" type="image/jpg" href="{% static '/images/imghome/icon.jpg' %}">
+	<!-- FONTS -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+	<input type="radio" name="Photos" id="check1" checked>
+	<input type="radio" name="Photos" id="check2" >
+	<input type="radio" name="Photos" id="check3" >
+	<input type="radio" name="Photos" id="check4" >
+	<input type="radio" name="Photos" id="check5" >
+	<input type="radio" name="Photos" id="check6" >
+	<div class="container">
+		{% include 'pages/navbar.html' %}
+		<h1>Portfolio</h1>
+		<div class="top-content">
+			<h3>Photo Gallery</h3>
+			<label for="check1">All</label>
+			<label for="check2">Portrait</label>
+			<label for="check3">Family</label>
+			<label for="check4">Wedding</label>
+			<label for="check5">Food</label>
+			<label for="check6">Place</label>
+		</div>
+
+		<div class="photo-gallery">
+			<!--PORTRAIT SECTION-->
+			<div class="pic portrait">
+					<img src="{% static '/images/imgportfolio/portrait1.jpg' %}">
+			</div>
+			<div class="pic portrait">
+					<img src="{% static '/images/imgportfolio/portrait2.jpg' %}">
+			</div>
+			<div class="pic portrait">
+					<img src="{% static '/images/imgportfolio/portrait3.jpg' %}">
+			</div>
+			<div class="pic portrait">
+					<img src="{% static '/images/imgportfolio/portrait4.jpg' %}">
+			</div>
+			<div class="pic portrait">
+					<img src="{% static '/images/imgportfolio/portrait5.jpg' %}">
+			</div>
+			<div class="pic portrait">
+					<img src="{% static '/images/imgportfolio/portrait6.jpg' %}">
+			</div>
+			<div class="pic portrait">
+					<img src="{% static '/images/imgportfolio/portrait8.jpg' %}">
+			</div>
+
+			<!--FAMILY SECTION-->
+			<div class="pic family">
+					<img src="{% static '/images/imgportfolio/family1.jpg' %}">
+			</div>
+			<div class="pic family">
+					<img src="{% static '/images/imgportfolio/family2.jpg' %}">
+			</div>
+			<div class="pic family">
+					<img src="{% static '/images/imgportfolio/family3.jpg' %}">
+			</div>
+			<div class="pic family">
+					<img src="{% static '/images/imgportfolio/family4.jpg' %}">
+			</div>
+			<div class="pic family">
+					<img src="{% static '/images/imgportfolio/family5.jpg' %}">
+			</div>
+			<div class="pic family">
+					<img src="{% static '/images/imgportfolio/family6.jpg' %}">
+			</div>
+
+			<!--WEDDING SECTION-->
+			<div class="pic wedding">
+					<img src="{% static '/images/imgportfolio/wedding1.jpg' %}">
+			</div>
+			<div class="pic wedding">
+					<img src="{% static '/images/imgportfolio/wedding2.jpg' %}">
+			</div>
+			<div class="pic wedding">
+					<img src="{% static '/images/imgportfolio/wedding3.jpg' %}">
+			</div>
+			<div class="pic wedding">
+					<img src="{% static '/images/imgportfolio/wedding4.jpg' %}">
+			</div>
+			<div class="pic wedding">
+					<img src="{% static '/images/imgportfolio/wedding5.jpg' %}">
+			</div>
+			<div class="pic wedding">
+					<img src="{% static '/images/imgportfolio/wedding6.jpg' %}">
+			</div>
+			<div class="pic wedding">
+					<img src="{% static '/images/imgportfolio/wedding7.jpg' %}">
+			</div>
+			<div class="pic wedding">
+					<img src="{% static '/images/imgportfolio/wedding8.jpg' %}">
+			</div>
+
+			<!--FOOD SECTION-->
+			<div class="pic food">
+					<img src="{% static '/images/imgportfolio/food1.jpg' %}">
+			</div>
+			<div class="pic food">
+					<img src="{% static '/images/imgportfolio/food2.jpg' %}">
+			</div>
+			<div class="pic food">
+					<img src="{% static '/images/imgportfolio/food3.jpg' %}">
+			</div>
+			<div class="pic food">
+					<img src="{% static '/images/imgportfolio/food4.jpg' %}">
+			</div>
+			<div class="pic food">
+					<img src="{% static '/images/imgportfolio/food5.jpg' %}">
+			</div>
+			<div class="pic food">
+					<img src="{% static '/images/imgportfolio/food6.jpg' %}">
+			</div>
+			<div class="pic food">
+					<img src="{% static '/images/imgportfolio/food7.jpg' %}">
+			</div>
+
+			<!--PLACE SECTION-->
+			<div class="pic place">
+					<img src="{% static '/images/imgportfolio/place1.jpg' %}">
+			</div>
+			<div class="pic place">
+					<img src="{% static '/images/imgportfolio/place2.jpg' %}">
+			</div>
+			<div class="pic place">
+					<img src="{% static '/images/imgportfolio/place3.jpg' %}">
+			</div>
+			<div class="pic place">
+					<img src="{% static '/images/imgportfolio/place4.jpg' %}">
+			</div>
+			<div class="pic place">
+					<img src="{% static '/images/imgportfolio/place5.jpg' %}">
+			</div>
+			<div class="pic place">
+					<img src="{% static '/images/imgportfolio/place6.jpg' %}">
+			</div>
+			<div class="pic place">
+					<img src="{% static '/images/imgportfolio/place7.jpg' %}">
+			</div>
+		</div>
+	</div>
+
+<!-- JavaScript Section -->
+	<script src="{% static '/js/JSNavbar.js' %}"></script>
+
+	<!-- Footer Section -->
+{% include 'pages/footer.html' %}
+
+</body>
+</html>

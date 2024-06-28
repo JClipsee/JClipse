@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <!---------- Style CSS ---------->
+	<link rel="stylesheet" type="text/css" href="{% static '/css/CSSContact.css' %}">
+    <!----- ICON ----->
+    <link rel="icon" type="image/jpg" href="{% static '/images/imghome/icon.jpg' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+                        {% include 'pages/navbar.html' %}
+    <div class="container">
+        <span class="big-circle"></span>
+        <div class="form">
+            <div class="contact-info">
+                <h3 class="title">Get in touch</h3>
+                <p class ="text">
+                    We're eager to collaborate with you to capture
+                    timeless moments and bring your vision to life
+                    through captivating imagery.
+                </p>
+                <div class="info">
+                    <div class="information">
+                        <img src="{% static '/images/imgcontact/icon1.png' %}" class="icon" alt="">
+                        <p>Talaba Bacoor, Cavite</p>
+                    </div>
+                    <div class="information">
+                        <img src="{% static '/images/imgcontact/icon2.png' %}" class="icon" alt="">
+                        <p>jclipsephotography@gmail.com</p>
+                    </div>
+                    <div class="information">
+                        <img src="{% static '/images/imgcontact/icon3.png' %}" class="icon" alt="">
+                        <p>123-345-678</p>
+                    </div>
+                </div>
+
+                <div class="social-media">
+                    <p>Connect with us: </p>
+                    <div class="social-icon">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <span class="circle one"></span>
+                <span class="circle two"></span>
+
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="b2af6310-10d9-46c5-9524-5f55501f1322">
+                    <h3 class="title">Contact us</h3>
+                    <div class="input-container">
+                        <input type="text" name="name" class="input" required>
+                        <label>Username</label>
+                        <span>Username</span>
+                    </div>
+                    <div class="input-container">
+                        <input type="email" name="email" class="input" required>
+                        <label>Email</label>
+                        <span>Email</span>
+                    </div>
+                    <div class="input-container">
+                        <input type="tel" name="phone" class="input" required>
+                        <label>Phone</label>
+                        <span>Phone</span>
+                    </div>
+                    <div class="input-container textarea focus">
+                        <textarea name="message" class="input" required></textarea>
+                        <label>Message</label>
+                        <span>Message</span>
+                    </div>
+                    <input type="submit" value="Send" class="btn">
+                </form>
+            </div>
+        </div>
+    </div>
+
+<!-- JavaScript Section -->
+	<script src="{% static '/js/JSNavbar.js' %}"></script>
+    <script src="{% static '/js/JSContact.js' %}"></script>
+</body>
+</html>

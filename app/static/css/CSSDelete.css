@@ -1,0 +1,104 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    background: url('{% static "/images/background.jpg" %}') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+form {
+    background: linear-gradient(135deg, #f76c6c, #6b5b95);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 100%;
+    box-sizing: border-box;
+    color: white;
+    position: relative;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.photographer-info {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.photographer-info p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #fff;
+}
+
+.photographer-info strong {
+    display: block;
+    font-size: 18px;
+    color: #fff;
+}
+
+p {
+    font-size: 16px;
+    color: #fff;
+}
+
+a, input[type="submit"] {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cancel {
+    background-color: #ff4c4c;
+    color: white;
+}
+
+.btn-cancel:hover {
+    background-color: #e63e3e;
+}
+
+a {
+    background-color: #ff4c4c;
+    color: white;
+}
+
+a:hover {
+    background-color: #e63e3e;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}

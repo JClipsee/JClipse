@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>About Us</title>
+<!-- FONT / Fontawesome -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+
+	<!-- CSS File -->
+	<link rel="stylesheet" type="text/css" href="{% static '/css/CSSAbout.css' %}">
+<!-- ICON -->
+	<link rel="icon" type="image/jpg" href="{% static '/images/imghome/icon.jpg' %}">
+</head>
+<body>
+	<section>
+		{% include 'pages/navbar.html' %}
+		<div class="row">
+			<h1>About Us</h1>
+		</div>
+		<div class="row">
+			<!-- Column 1 -->
+			<div class="column">
+				<div class="card">
+					<div class="img-container">
+						<img src="{% static '/images/imgabout/profile3.png' %}">
+					</div>
+					<h3>Mathilda Granger</h3>
+					<p>Photographer</p>
+					<div class="icons">
+						<a href=""><i class="fab fa-facebook"></i></a>
+						<a href=""><i class="fab fa-tiktok"></i></a>
+						<a href=""><i class="fab fa-github"></i></a>
+						<a href=""><i class="fas fa-envelope"></i></a>
+					</div>
+				</div>
+			</div>
+			<!-- Column 2 -->
+			<div class="column">
+				<div class="card">
+					<div class="img-container">
+						<img src="{% static '/images/imgabout/profile2.png' %}">
+					</div>
+					<h3>Carms Naling</h3>
+					<p>Founder</p>
+					<div class="icons">
+						<a href=""><i class="fab fa-facebook"></i></a>
+						<a href=""><i class="fab fa-tiktok"></i></a>
+						<a href=""><i class="fab fa-github"></i></a>
+						<a href=""><i class="fas fa-envelope"></i></a>
+					</div>
+				</div>
+			</div>
+			<!-- Column 3 -->
+			<div class="column">
+				<div class="card">
+					<div class="img-container">
+						<img src="{% static '/images/imgabout/profile1.png' %}">
+					</div>
+					<h3>Jerone Naling</h3>
+					<p>Developer</p>
+					<div class="icons">
+						<a href=""><i class="fab fa-facebook"></i></a>
+						<a href=""><i class="fab fa-tiktok"></i></a>
+						<a href=""><i class="fab fa-github"></i></a>
+						<a href=""><i class="fas fa-envelope"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<!--Mission and Vision Section-->
+	<div class="about-sec">
+		<div class="about-img">
+			<img src="{% static '/images/imghome/icon.jpg' %}">
+		</div>
+		<div class="about-intro">
+			<h3>Mission <span style="color: #BCFD4C;"> !</span></h3>
+				<p>To capture the essence of life's moments, preserving memories, emotions, and stories through the lens of creativity, authenticity, and passion.</p>
+				<br>
+			<h3>Vision <span style="color: #BCFD4C;"> !</span></h3>
+				<p>To inspire, connect, and empower individuals globally through the art of photography, fostering appreciation for diverse perspectives, cultures, and landscapes.</p>
+		</div>
+	</div>
+
+
+<!--Achivements Section-->
+	<div class="achievements">
+		<div class="a-container left-container">
+			<img src="{% static '/images/imghome/icon.jpg' %}">
+			<div class="text-box">
+				<h2>Client Satisfaction</h2>
+				<p>Consistently exceeding client expectations by delivering exceptional photography services tailored to their unique needs and preferences.</p>
+				<span class="left-container-arrow"></span>
+			</div>
+		</div>
+		<div class="a-container right-container">
+			<img src="{% static '/images/imghome/icon.jpg' %}">
+			<div class="text-box">
+				<h2>Collaborations</h2>
+				<p>Successful collaborations with renowned brands, publications, and organizations, showcasing the versatility and impact of our photography across diverse platforms and audiences.</p>
+				<span class="right-container-arrow"></span>
+			</div>
+		</div>
+		<div class="a-container left-container">
+			<img src="{% static '/images/imghome/icon.jpg' %}">
+			<div class="text-box">
+				<h2>Exhibit at a Gallery</h2>
+				<p>Showcase your work in a local gallery or exhibition to gain exposure and recognition within the artistic community.</p>
+				<span class="left-container-arrow"></span>
+			</div>
+		</div>
+		<div class="a-container right-container">
+			<img src="{% static '/images/imghome/icon.jpg' %}">
+			<div class="text-box">
+				<h2>Teach Photography Workshops</h2>
+				<p>Share your expertise and passion for photography by organizing workshops, classes, or tutorials for aspiring photographers, empowering others to develop their skills and artistic vision.</p>
+				<span class="right-container-arrow"></span>
+			</div>
+		</div>
+		<div class="a-container left-container">
+			<img src="{% static '/images/imghome/icon.jpg' %}">
+			<div class="text-box">
+				<h2>Successful Photography Projects</h2>
+				<p>Complete significant photography projects or series focused on specific themes, narratives, or subjects, demonstrating your creativity, storytelling ability, and dedication to your craft.</p>
+				<span class="left-container-arrow"></span>
+			</div>
+		</div>
+		<div class="a-container right-container">
+			<img src="{% static '/images/imghome/icon.jpg' %}">
+			<div class="text-box">
+				<h2>Build a Strong Online Presence</h2>
+				<p>Establish a vibrant online presence through a professional website, social media channels, or online portfolios, engaging with followers, networking with peers, and attracting potential clients or collaborators with your captivating imagery and storytelling.</p>
+				<span class="right-container-arrow"></span>
+			</div>
+		</div>
+	</div>
+
+<!-- JavaScript Section -->
+	<script src="{% static '/js/JSNavbar.js' %}"></script>
+
+	<!-- Footer Section -->
+{% include 'pages/footer.html' %}
+
+</body>
+</html>

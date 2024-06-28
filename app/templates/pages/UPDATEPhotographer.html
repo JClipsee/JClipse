@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN Photographer Form</title>
+    <link rel="icon" type="image/jpg" href="{% static '/images/imghome/icon.jpg' %}">
+    <link rel="stylesheet" href="{% static 'css/CSSUpdate.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="form-wrapper">
+        <form id="photographerForm" method="POST" action="{% url 'updatePhotographer' photographer.id %}">
+            {% csrf_token %}
+            <h2>Update Photographer Information</h2>
+            <a href="/database" class="close-button"><i class="fas fa-times"></i></a>
+            <p class="description">Please fill out the form below to update Photographer information.</p>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="id_name">Name</label>
+                    {{ form.name }}
+                </div>
+                <div class="form-group">
+                    <label for="id_email">Email</label>
+                    {{ form.email }}
+                </div>
+                <div class="form-group">
+                    <label for="id_phone">Contact</label>
+                    {{ form.contact }}
+                </div>
+                <div class="form-group">
+                    <label for="id_role">Role</label>
+                    {{ form.role }}
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Save changes</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('photographerForm');
+            const closeButton = form.querySelector('.close-button');
+
+            closeButton.addEventListener('click', function(event) {
+                event.preventDefault();
+                if (confirm('Are you sure you want to close the form? Any unsaved changes will be lost.')) {
+                    window.location.href = '/database';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

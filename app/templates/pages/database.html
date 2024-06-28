@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JClipse Database</title>
+    <link rel="icon" type="image/jpg" href="{% static '/images/imghome/icon.jpg' %}">
+    <link rel="stylesheet" href="{% static 'css/CSSDatabase.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>JClipse Database</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <nav class="sidebar__nav">
+                <ul>
+                    <li><a href="#photographers">Photographers</a></li>
+                    <li><a href="#clients">Clients</a></li>
+                    <li><a href="#offers">Offers</a></li>
+                    <li><a href="#appointments">Appointments</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <section id="photographers" class="section active">
+                <div class="section-header">
+                    <h2>Photographers Table</h2>
+                    <div class="btn-group">
+                        <a href="/photographer" class="btn">Add Photographer</a>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input type="search" placeholder="Search Photographers...">
+                </div>
+                <div class="table__body">
+                    <table id="table1" class="table animated fadeIn">
+                        <caption>Total Photographers: {{ total_photographers }}</caption>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Contact</th>
+                                <th>Role</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for photographer in photographers %}
+                                <tr>
+                                    <td>{{ photographer.id }}</td>
+                                    <td>{{ photographer.name }}</td>
+                                    <td>{{ photographer.email }}</td>
+                                    <td>{{ photographer.contact }}</td>
+                                    <td>{{ photographer.role }}</td>
+                                    <td>
+                                        <a href="{% url 'updatePhotographer' photographer.id %}" class="btn btn-primary">Edit</a>
+                                        <a href="{% url 'deletePhotographer' photographer.id %}" class="btn btn-primary">Delete</a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="clients" class="section">
+                <div class="section-header">
+                    <h2>Clients Table</h2>
+                    <div class="btn-group">
+                        <a href="/adminClient" class="btn">Add Client</a>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input type="search" placeholder="Search Clients...">
+                </div>
+                <div class="table__body">
+                    <table id="table2" class="table animated fadeIn">
+                        <caption>Total Clients: {{ total_clients }}</caption>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>Gender</th>
+                                <th>Email</th>
+                                <th>Contact</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for client in clients %}
+                                <tr>
+                                    <td>{{ client.id }}</td>
+                                    <td>{{ client.name }}</td>
+                                    <td>{{ client.age }}</td>
+                                    <td>{{ client.gender }}</td>
+                                    <td>{{ client.email }}</td>
+                                    <td>{{ client.contact }}</td>
+                                    <td>
+                                        <a href="{% url 'updateClient' client.id %}" class="btn btn-primary">Edit</a>
+                                        <a href="{% url 'deleteClient' client.id %}" class="btn btn-primary">Delete</a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="appointments" class="section">
+                <div class="section-header">
+                    <h2>Appointments Table</h2>
+                    <div class="btn-group">
+                        <a href="/a_appointment" class="btn">Add Appointment</a>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input type="search" placeholder="Search Appointments...">
+                </div>
+                <div class="table__body">
+                    <table id="table3" class="table animated fadeIn">
+                        <caption>Total Appointments: {{ total_appointments }}</caption>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Client</th>
+                                <th>Photographer</th>
+                                <th>Appointment Date</th>
+                                <th>Package Type</th>
+                                <th>Location</th>
+                                <th>Price</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for appointment in appointments %}
+                                <tr>
+                                    <td>{{ appointment.id }}</td>
+                                    <td>{{ appointment.client }}</td>
+                                    <td>{{ appointment.photographer }}</td>
+                                    <td>{{ appointment.appointment_date }}</td>
+                                    <td>{{ appointment.offer.name }}</td>
+                                    <td>{{ appointment.location }}</td>
+                                    <td>{{ appointment.offer.price }}</td>
+                                    <td>
+                                        <a href="{% url 'updateAppointment' appointment.id %}" class="btn btn-primary">Edit</a>
+                                        <a href="{% url 'deleteAppointment' appointment.id %}" class="btn btn-primary">Delete</a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="offers" class="section">
+                <div class="section-header">
+                    <h2>Offers Table</h2>
+                    <div class="btn-group">
+                        <a href="/offer" class="btn">Add New Offer</a>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input type="search" placeholder="Search Offers...">
+                </div>
+                <div class="table__body">
+                    <table id="table4" class="table animated fadeIn">
+                        <caption>Total Offers: {{ total_offers }}</caption>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Inclusions</th>
+                                <th>Price</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for offer in offers %}
+                                <tr>
+                                    <td>{{ offer.id }}</td>
+                                    <td>{{ offer.name }}</td>
+                                    <td>{{ offer.inclusions }}</td>
+                                    <td>{{ offer.price }}</td>
+                                    <td>
+                                        <a href="{% url 'updateOffer' offer.id %}" class="btn btn-primary">Edit</a>
+                                        <a href="{% url 'deleteOffer' offer.id %}" class="btn btn-primary">Delete</a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal for adding/editing -->
+    <div id="modal" class="modal" role="dialog" aria-labelledby="modalTitle">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/modal.js' %}"></script>
+    <script src="{% static 'js/sidebar.js' %}"></script>
+</body>
+</html>
